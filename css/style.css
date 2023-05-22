@@ -1,0 +1,965 @@
+@import url(https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;
+
+400&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap);
+@charset "UTF-8";
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 320px;
+}
+
+body {
+  color: #E3E4E6;
+  line-height: 1;
+  font-family: "Work Sans";
+  font-size: 0.875rem;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input,
+button,
+textarea {
+  font-family: "Work Sans";
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+  background-color: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+.lock body {
+  overflow: hidden;
+  -ms-touch-action: none;
+      touch-action: none;
+  -ms-scroll-chaining: none;
+      overscroll-behavior: none;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+}
+
+@supports (overflow: clip) {
+  .wrapper {
+    overflow: clip;
+  }
+}
+
+.wrapper > main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.wrapper > * {
+  min-width: 0;
+}
+
+/*
+(i) Стилі будуть застосовуватись до
+всіх класів, що містять *__container
+Наприклад header__container, main__container і т.п.
+Сніппет (HTML): cnt
+*/
+
+[class*=__container] {
+  max-width: 66.25rem;
+  margin: 0 auto;
+  padding: 0 0.9375rem;
+}
+
+[class*=-ibg] {
+  position: relative;
+}
+
+[class*=-ibg] img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+[class*=-ibg_contain] img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.header {
+  width: 100%;
+  padding-top: 10px;
+  height: 80px;
+}
+
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.header-title {
+  position: absolute;
+  left: 10px;
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+/Edge */
+  user-select: none;
+  opacity: 0.15;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.header-title span {
+  font-size: 15px;
+  -webkit-filter: drop-shadow(0px 0px 1px rgb(255, 255, 255));
+          filter: drop-shadow(0px 0px 1px rgb(255, 255, 255));
+}
+
+.header__menu {
+  position: absolute;
+  top: 22px;
+}
+
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.menu__list :not(:last-child) {
+  padding-right: 30px;
+}
+
+.menu__link {
+  position: relative;
+}
+
+.menu__link:hover::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+      -ms-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  bottom: -8px;
+  width: 25px;
+  height: 3px;
+  border-radius: 10px;
+  background: #BC3CD8;
+}
+
+.menu__link.active {
+  color: #BC3CD8;
+}
+
+.menu__link.active::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+      -ms-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  bottom: -8px;
+  width: 25px;
+  height: 3px;
+  border-radius: 10px;
+  background: #BC3CD8;
+}
+
+.footer {
+  position: relative;
+}
+
+.footer img {
+  right: 3px;
+  bottom: 0;
+  position: absolute;
+  width: 110%;
+}
+
+.footer p {
+  color: #000;
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -40%);
+      -ms-transform: translate(-50%, -40%);
+          transform: translate(-50%, -40%);
+}
+
+body {
+  text-transform: uppercase;
+  font-family: "Work Sans", sans-serif;
+}
+
+.no-webp .wrapper{
+  background: url("../img/bgMAIN.jpeg"); }
+
+.wrapper {
+  position: relative;
+  color: whitesmoke;
+  background-position: 0 0;
+  background-size: contain;
+  height: 6400px;
+}
+
+.First__container {
+  padding: 80px 0;
+  position: relative;
+}
+
+.no-webp .First-title{
+  background: url("../img/slogan.png"); }
+
+.First-title {
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  min-width: 300px;
+  width: 100%;
+  height: 130px;
+}
+
+.no-webp .First-img{
+  background: url("../img/planet1.png"); }
+
+.First-img {
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  margin: 0 auto;
+  height: 500px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.First-btn {
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translate(-26%, 60%);
+      -ms-transform: translate(-26%, 60%);
+          transform: translate(-26%, 60%);
+  opacity: 1;
+  position: absolute;
+}
+
+.First-btn:hover {
+  -webkit-filter: drop-shadow(0px 0px 6px rgb(255, 255, 255));
+          filter: drop-shadow(0px 0px 6px rgb(255, 255, 255));
+}
+
+.Hi {
+  position: relative;
+  height: 1500px;
+  margin-top: 200px;
+}
+
+.Hi .Hi__container {
+  position: relative;
+}
+
+.Hi .Hi-block {
+  background: rgba(223, 223, 223, 0.07);
+  max-width: 1100px;
+  height: 600px;
+}
+
+.Hi .Hi-img {
+  max-width: 450px;
+  width: 100%;
+}
+
+.Hi .Hi-img img {
+  width: 100%;
+  max-height: 575px;
+}
+
+.Hi .Hi-planet2 {
+  position: absolute;
+  left: 1%;
+  bottom: 0;
+  -webkit-transform: translate(-35%, 0%);
+      -ms-transform: translate(-35%, 0%);
+          transform: translate(-35%, 0%);
+  height: 400px;
+  width: 500px;
+  z-index: 0;
+}
+
+.Hi .Hi-txt {
+  position: absolute;
+  right: 0;
+  top: 300px;
+  max-width: 700px;
+  font-size: 24px;
+  line-height: 147.5%;
+  text-align: center;
+}
+
+.Hi .Hi-txt span {
+  color: #BC41D0;
+}
+
+.Hi .Hi__skills {
+  padding: 10px;
+  font-size: 24px;
+  height: 300px;
+}
+
+.Hi .Hi__skills .skills-html .slider {
+  position: relative;
+  max-width: 1000px;
+  width: 80%;
+  min-width: 80px;
+  margin-right: 50px;
+  margin-top: 50px;
+  margin-left: 50px;
+  height: 2px;
+  background: red;
+}
+
+.Hi .Hi__skills .skills-html .slider p {
+  position: absolute;
+  right: -7px;
+  font-size: 10px;
+  top: 5px;
+}
+
+.Hi .Hi__skills .skills-html .slider::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  border-radius: 50px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background: red;
+  border: 2px solid rgba(104, 0, 120, 0.4666666667);
+}
+
+.Hi .Hi__skills .skills-css .slider {
+  position: relative;
+  max-width: 1000px;
+  width: 60%;
+  min-width: 60px;
+  margin-right: 80px;
+  margin-top: 50px;
+  margin-left: 50px;
+  height: 2px;
+  background: red;
+}
+
+.Hi .Hi__skills .skills-css .slider p {
+  position: absolute;
+  right: -7px;
+  font-size: 10px;
+  top: 5px;
+}
+
+.Hi .Hi__skills .skills-css .slider::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  border-radius: 50px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background: red;
+  border: 2px solid rgba(104, 0, 120, 0.4666666667);
+}
+
+.Hi .Hi__skills .skills-js .slider {
+  position: relative;
+  max-width: 1000px;
+  width: 30%;
+  min-width: 30px;
+  margin-right: 100px;
+  margin-top: 50px;
+  margin-left: 50px;
+  height: 2px;
+  background: red;
+}
+
+.Hi .Hi__skills .skills-js .slider p {
+  position: absolute;
+  right: -7px;
+  font-size: 10px;
+  top: 5px;
+}
+
+.Hi .Hi__skills .skills-js .slider::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  border-radius: 50px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background: red;
+  border: 2px solid rgba(104, 0, 120, 0.4666666667);
+}
+
+.Hi .Hi__skills .skills-item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100px;
+  margin: 40px;
+  background-size: 100px;
+}
+
+.Hi .Hi__subskills {
+  padding: 10px;
+  padding-top: 170px;
+}
+
+.Hi .subskills-title {
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.Hi .subskills-down {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Hi .subskills-imgs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 500px;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 10px;
+}
+
+.Hi .subskills-img {
+  width: 80px;
+  height: 80px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.Hi .subskills-img:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.Hi .subskills-txt {
+  width: 350px;
+  font-size: 16px;
+  color: rgba(217, 217, 217, 0.64);
+  text-align: center;
+}
+
+.How {
+  position: relative;
+  margin-top: 500px;
+  background: rgba(223, 223, 223, 0.07);
+  height: 500px;
+}
+
+.How .How__container {
+  opacity: 0;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.How .How-title {
+  font-weight: 100;
+  font-size: 48px;
+  padding: 50px 0;
+}
+
+.How .How-txt {
+  font-family: "Source Code Pro", monospace;
+  max-width: 700px;
+  width: 100%;
+  line-height: 150%;
+}
+
+.How .How-planet {
+  width: 700px;
+  height: 700px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 70%;
+  z-index: 0;
+}
+
+.Get {
+  position: relative;
+  margin-top: 400px;
+  height: 1000px;
+}
+
+.Get .Get__right {
+  position: absolute;
+  right: -100px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  max-width: 500px;
+  width: 100%;
+  height: 700px;
+  background: rgba(223, 223, 223, 0.07);
+}
+
+.Get .Get__right .right-title {
+  width: 100%;
+  text-align: center;
+  font-size: 32px;
+  padding: 20px 0;
+}
+
+.Get .Get__right .right-form {
+  height: 100%;
+  max-width: 550px;
+  text-align: center;
+  padding: 30px 15px;
+}
+
+.Get .Get__right .form__item {
+  margin-bottom: 20px;
+}
+
+.Get .Get__right .form__label {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.Get .Get__right .form__input {
+  height: 50px;
+  padding: 0 20px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.Get .Get__right textarea.form__input {
+  min-height: 120px;
+  resize: none;
+}
+
+.Get .Get__right .withtxt {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.Get .Get__right .form__button {
+  margin-top: 80px;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 300;
+  width: 200px;
+  border-radius: 10px;
+  height: 50px;
+  background: #BC41D0;
+  opacity: 0.9;
+}
+
+.Get .Get__right .form__button:hover {
+  opacity: 1;
+  -webkit-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;
+  outline: 2px solid #BC41D0;
+  outline-offset: 3px;
+}
+
+.Get .Get__right .form__button:active {
+  outline: 2px solid #BC41D0;
+  outline-offset: 10px;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.Get .Get-left {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: absolute;
+  top: 600px;
+  height: 100px;
+  left: -100px;
+  width: 250px;
+  background: rgba(223, 223, 223, 0.07);
+}
+
+.Get .Get-left .left-imgs {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 240px;
+}
+
+.Get .Get-left .img-left {
+  height: 40px;
+  width: 40px;
+  opacity: 0.7;
+}
+
+.Get .Get-left .img-left:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.Get .Get-left .left-menu {
+  margin-left: 30px;
+  display: inline-block;
+  position: absolute;
+}
+
+.Get .Get-left .left-menu._active .left-menu-list {
+  display: block;
+}
+
+.Get .Get-left .left-menu-list {
+  background: rgba(223, 223, 223, 0.07);
+  margin-top: 12px;
+  text-align: center;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding-bottom: 10px;
+  border: 2px solid rgba(189, 65, 208, 0.3294117647);
+  border-top: none;
+}
+
+.Get .Get-left .left-menu-list li:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.Get .Get-left .left-menu-button {
+  font-size: 15px;
+  width: 200px;
+  height: 30px;
+  border-radius: 10px;
+  background: rgba(189, 65, 208, 0.4196078431);
+}
+
+.Get .Get-left .left-menu-link:hover {
+  background: rgba(189, 65, 208, 0.4196078431);
+}
+
+._error {
+  -webkit-filter: drop-shadow(0 0 15px #ff0000);
+          filter: drop-shadow(0 0 15px #ff0000);
+  color: #ff0000;
+}
+
+._sending {
+  opacity: 0.2;
+}
+
+.Get__right.element-animation.element-show {
+  -webkit-transition: all 1.5s;
+  -o-transition: all 1.5s;
+  transition: all 1.5s;
+  right: 0;
+}
+
+.element-animation.element-show {
+  opacity: 1;
+  -webkit-transition: all 2.5s;
+  -o-transition: all 2.5s;
+  transition: all 2.5s;
+}
+
+.Get-left.element-animation.element-show {
+  left: 0;
+  -webkit-transition: all 1.5s;
+  -o-transition: all 1.5s;
+  transition: all 1.5s;
+}
+
+/* Стилизация основного скроллбара */
+
+::-webkit-scrollbar {
+  width: 10px;
+  /* Ширина скроллбара */
+  background-color: #000;
+  /* Убираем фон скроллбара */
+}
+
+/* Стилизация ползунка скроллбара */
+
+::-webkit-scrollbar-thumb {
+  background-color: #72307c;
+  /* Цвет ползунка */
+  border: 2px solid rgba(110, 110, 110, 0.7019607843);
+  border-radius: 5px;
+  /* Радиус скругления углов ползунка */
+}
+
+/* Стилизация ползунка при наведении */
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #723a7a;
+  /* Цвет ползунка при наведении */
+  outline: 2px solid rgba(110, 110, 110, 0.7019607843);
+  border: 1px solid rgba(110, 110, 110, 0.7019607843);
+  outline-offset: 3px;
+}
+
+::-webkit-scrollbar-thumb:active {
+  outline: 2px solid rgba(110, 110, 110, 0.7019607843);
+  outline-offset: 10px;
+  border: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+@media (min-width: 66.25em) {
+  .Hi .subskills-img {
+    width: 5rem;
+  }
+
+  .Hi .subskills-img {
+    height: 5rem;
+  }
+
+  .Hi .subskills-txt {
+    font-size: 1rem;
+  }
+
+  .How .How-txt {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .Hi .Hi-txt {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 845px) {
+  .Hi .Hi-txt {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 752px) {
+  .Get-left {
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 663px) {
+  .Hi .Hi-txt {
+    font-size: 15px;
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 478px) {
+  .Hi .Hi-txt {
+    top: 150px;
+  }
+
+  .Hi .Hi-planet {
+    bottom: -300px;
+  }
+
+  .How {
+    margin-top: 300px;
+  }
+}
+
+@media (max-width: 426px) {
+  .header-title {
+    font-size: 10px;
+  }
+
+  .header-title span {
+    font-size: 12px;
+  }
+
+  .no-webp .First-title{
+    background: url("../img/SLOGANMOBILE.png"); }
+
+  .First-title {
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+  }
+}
+
+@media (max-width: 20em) {
+  .Hi .subskills-img {
+    width: 2.5rem;
+  }
+
+  .Hi .subskills-img {
+    height: 2.5rem;
+  }
+
+  .Hi .subskills-txt {
+    font-size: 0.5625rem;
+  }
+
+  .How .How-txt {
+    font-size: 0.8125rem;
+  }
+}
+
+@media (min-width: 20em) and (max-width: 66.25em) {
+@supports (width: clamp( 2.5rem , 1.4189189189rem  +  5.4054054054vw , 5rem )) {
+    .Hi .subskills-img {
+      width: clamp( 2.5rem , 1.4189189189rem  +  5.4054054054vw , 5rem );
+    }
+}
+
+@supports not (width: clamp( 2.5rem , 1.4189189189rem  +  5.4054054054vw , 5rem )) {
+    .Hi .subskills-img {
+      width: calc(2.5rem + 2.5 * (100vw - 20rem) / 46.25);
+    }
+}
+
+@supports (height: clamp( 2.5rem , 1.4189189189rem  +  5.4054054054vw , 5rem )) {
+    .Hi .subskills-img {
+      height: clamp( 2.5rem , 1.4189189189rem  +  5.4054054054vw , 5rem );
+    }
+}
+
+@supports not (height: clamp( 2.5rem , 1.4189189189rem  +  5.4054054054vw , 5rem )) {
+    .Hi .subskills-img {
+      height: calc(2.5rem + 2.5 * (100vw - 20rem) / 46.25);
+    }
+}
+
+@supports (font-size: clamp( 0.5625rem , 0.3733108108rem  +  0.9459459459vw , 1rem )) {
+    .Hi .subskills-txt {
+      font-size: clamp( 0.5625rem , 0.3733108108rem  +  0.9459459459vw , 1rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.5625rem , 0.3733108108rem  +  0.9459459459vw , 1rem )) {
+    .Hi .subskills-txt {
+      font-size: calc(0.5625rem + 0.4375 * (100vw - 20rem) / 46.25);
+    }
+}
+
+@supports (font-size: clamp( 0.8125rem , 0.7314189189rem  +  0.4054054054vw , 1rem )) {
+    .How .How-txt {
+      font-size: clamp( 0.8125rem , 0.7314189189rem  +  0.4054054054vw , 1rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.8125rem , 0.7314189189rem  +  0.4054054054vw , 1rem )) {
+    .How .How-txt {
+      font-size: calc(0.8125rem + 0.1875 * (100vw - 20rem) / 46.25);
+    }
+}
+}
+
+.webp .wrapper{ background: url(../img/bgMAIN.webp); }
+
+.webp .First-title{ background: url(../img/slogan.webp); }
+
+.webp .First-img{ background: url(../img/planet1.webp); }
+
+@media (max-width: 426px){
+  .webp .First-title{ background: url(../img/SLOGANMOBILE.webp); }
+}
